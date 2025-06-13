@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'notification-api'
+    static_configs:
+      - targets: ['notification-api:8000']
+    metrics_path: '/metrics'
+    scrape_interval: 5s
+
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:6379']

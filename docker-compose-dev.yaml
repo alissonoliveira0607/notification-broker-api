@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  notification-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+      - /app/__pycache__
+    environment:
+      - DEBUG=true
+      - LOG_LEVEL=DEBUG
+    ports:
+      - "8000:8000"
+    command: ["python", "main.py"]

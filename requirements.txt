@@ -1,0 +1,11 @@
+flask
+flask-cors
+aiohttp
+asyncio
+pydantic
+python-dotenv
+pytest
+pytest-asyncio
+pytest-mock
+gunicorn
+gevent
